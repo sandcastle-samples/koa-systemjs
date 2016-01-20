@@ -1,0 +1,26 @@
+#!/bin/sh
+set -e
+
+# script/builds - builds the release
+
+cd "$(dirname "$0")/.."
+
+# ------
+
+sh script/clean
+
+# ------
+
+echo "Building..."
+
+mkdir dist
+cp package.json dist
+cp -Rv server/** dist
+
+cd dist
+npm install --production
+cd ..
+
+echo "Done building!"
+
+# ------

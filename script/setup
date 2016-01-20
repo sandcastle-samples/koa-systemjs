@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+
+# script/setup - sets up the project for the first time
+
+cd "$(dirname "$0")/.."
+
+# --------
+
+echo "Setting up..."
+
+npm install -g tsd
+
+echo "Done setting up!"
+
+# --------

@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+# script/lint - Validates the source files against quality and style standards
+
+cd "$(dirname "$0")/.."
+
+# ------
+
+echo "Linting..."
+
+node_modules/.bin/eslint "./src/**/*.js"
+node_modules/.bin/tslint "./src/**/*.ts"
+
+echo "Done linting!"
+
+# ------

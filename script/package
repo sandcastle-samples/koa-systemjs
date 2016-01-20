@@ -1,0 +1,16 @@
+#!/bin/sh
+set -e
+
+# script/package - packages the application for deployment
+
+cd "$(dirname "$0")/.."
+
+# ------
+
+echo "Packaging..."
+
+docker build -t koa-systemjs .
+
+echo "Done packaging!"
+
+# ------

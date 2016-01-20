@@ -1,0 +1,13 @@
+#!/bin/sh
+set -e
+
+# script/server - runs the application
+
+cd "$(dirname "$0")/.."
+
+# ------
+
+open http://localhost:3001/
+node src/server.js
+
+# ------

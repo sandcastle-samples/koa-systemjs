@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+# script/test - runs all tests
+
+cd "$(dirname "$0")/.."
+
+# --------
+
+echo "No tests!"
+
+# --------

@@ -1,5 +1,8 @@
 'use strict';
 
+import Messenger from './messenger';
+
+
 interface IHello {
   say(): void;
 }
@@ -10,7 +13,9 @@ export default function Hello(): IHello {
      * Says hello to the console.
      */
     say(): void {
-      console.log('hello!');
+
+      let msg: Messenger = new Messenger();
+      msg.send('hello there!');
     }
   };
 }

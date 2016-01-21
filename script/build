@@ -15,7 +15,7 @@ echo "Building..."
 
 mkdir dist
 cp package.json dist
-cp -Rv server/** dist
+cp -Rv src/** dist
 
 cd dist
 npm install --production
